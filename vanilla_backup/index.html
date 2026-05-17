@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate to two hearts | An Interactive Story</title>
+    <meta name="description" content="A cinematic time-travel romance between a samurai and a modern girl, set between old Japan and modern Tokyo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 
+        DEVELOPER NOTES:
+        1. POSTER IMAGE: Replace "poster.png" in styles.css or hero section if needed.
+        2. AUDIO FILE: Replace "story-voiceover.mp3" in the audio element below.
+        3. STORY TEXT: Paste the full story content in the #story-content container.
+        4. TITLE/LOGLINE: Update the <h1> and <p> in the hero section.
+    -->
+
+    <header>
+        <div class="logo">GATE TO TWO HEARTS</div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="section">
+            <div class="hero-bg" style="background-image: url('poster.png');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="reveal">Gate to two hearts</h1>
+                <p class="logline reveal">A stoic samurai from the Edo period finds himself in modern-day Shinjuku, tethered to a girl who holds the key to his past—and a choice that could shatter time itself.</p>
+                <div class="hero-actions reveal">
+                    <button id="btn-play-hero" class="btn btn-primary">Play Story</button>
+                    <button id="btn-read-hero" class="btn btn-secondary">Read Story</button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- Story + Audio Section -->
+        <section id="story-audio" class="section">
+            <div class="container">
+                <div class="split-layout">
+                    <!-- Left: Audio Player -->
+                    <div class="audio-panel reveal-left">
+                        <div class="audio-card">
+                            <div class="audio-visualizer">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="audio-info">
+                                <h3>Narrated by Akiko</h3>
+                                <p>Voice-over Narration</p>
+                            </div>
+                            <div class="custom-player">
+                                <audio id="story-audio-element">
+                                    <source src="narration.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <div class="player-controls">
+                                    <button id="play-pause" class="play-btn">
+                                        <svg viewBox="0 0 24 24" class="icon-play"><path d="M8 5v14l11-7z"/></svg>
+                                        <svg viewBox="0 0 24 24" class="icon-pause" style="display: none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                                    </button>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" id="progress-bar">
+                                            <div class="progress-fill" id="progress-fill"></div>
+                                        </div>
+                                        <div class="time-display">
+                                            <span id="current-time">0:00</span>
+                                            <span id="duration">0:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Story Text -->
+                    <div class="text-panel reveal-right">
+                        <div id="story-content" class="scrollable-text">
+                            <p data-start="0">Ryo, a samurai from the Tokugawa era, is suddenly thrown into modern Tokyo after walking through a mysterious torii gate during a storm. Lost in a world of neon lights, technology, and crowded streets, he accidentally saves a schoolgirl named Aiko from a speeding bike. Alongside her friend Kenji, who is obsessed with history and science, they slowly realize Ryo is not a cosplayer, but a real samurai displaced through time.</p>
+                            
+                            <p data-start="15">Kenji discovers ancient records about a “vanishing samurai” connected to a strange torii gate that appears during moments when history is about to change. The same shrine still exists in modern Japan, and recent lightning activity suggests the gate may open again. While Kenji researches the mystery, Aiko helps Ryo adjust to modern life. Ryo learns trains, ramen, convenience stores, and the strange peace of a world without war. Over time, he becomes deeply attached to both Aiko and the life he never imagined possible.</p>
+
+                            <p data-start="35">Aiko, meanwhile, feels trapped by the expectations of modern life and dreams of escaping somewhere she truly belongs. She and Ryo grow emotionally closer, bonding over their shared feeling of being lost between worlds. Kenji becomes increasingly obsessed with the torii gate, uncovering evidence that it doesn’t simply move people through time, but appears whenever history itself is unstable. He begins to suspect Ryo was brought to the future for a reason.</p>
+
+                            <p data-start="55">One stormy night, an old priest arrives at their apartment and reveals the truth: the gate is opening again, but this time it has become unstable because of Kenji’s attempts to study it. If it breaks completely, time itself could collapse, erasing memories, people, and entire histories. The priest explains that Ryo now faces two choices. First, he can return to his original era and continue the life he was meant to live, though it will leave emotional scars on Aiko and Kenji. Second, he can remain in the modern world, but at the cost of losing all memories of his past life as a samurai.</p>
+
+                            <p data-start="85">Before Ryo can decide, the gate drags all of them into a strange space outside time itself. There, two gates appear: the original red gate representing duty and sacrifice, and a new unstable blue gate accidentally created by Kenji’s experiments. The blue gate shows glimpses of a future where all three of them live together peacefully. However, using it could completely rewrite reality. The priest warns them that this “third path” should not exist and could destroy everything.</p>
+
+                            <p data-start="115">Ryo realizes he cannot choose between abandoning his past or erasing who he once was. Instead, he grabs both gates at once, refusing to let time decide his fate for him. Aiko and Kenji hold onto him as the gates collapse together. Memories, timelines, and identities begin breaking apart as the three of them fight against the rules controlling their lives. Ryo declares that if time is a circle, then they should draw that circle themselves instead of blindly following destiny.</p>
+
+                            <p data-start="145">When Ryo wakes up, reality has changed. He is no longer a samurai living in modern Japan. Instead, he has always existed there as an ordinary student and friend of Aiko and Kenji. However, fragments of the old timeline remain buried inside their memories like dreams they cannot fully explain. Aiko remembers visions of Ryo standing beneath a red torii gate in the rain, always leaving her behind. Kenji discovers an old photograph showing three figures beneath the shrine gate with a note calling them “The three who defied the gate.”</p>
+
+                            <p data-start="175">The three slowly realize they succeeded in doing the impossible. Rather than choosing between fate and sacrifice, they rewrote time itself together. Though the memories of their previous lives are fading, the emotional bond between them remains. Ryo understands that even without remembering every detail of who he once was, he still found his way back to the people who mattered most. The story ends with the three walking into modern Tokyo together while the old torii gate quietly waits in the distance, ready for the next person daring enough to challenge destiny.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Poster Focus Section -->
+        <section id="poster-focus" class="section">
+            <div class="container">
+                <div class="poster-container">
+                    <div class="poster-frame reveal-zoom">
+                        <img src="poster.png" alt="Gate to two hearts Poster" id="focus-poster">
+                    </div>
+                    <div class="poster-caption reveal">
+                        <p>Artistic Direction: Sumi-e ink wash textures blended with cinematic neon aesthetics. A visual representation of the collision between tradition and modernity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Details Section -->
+        <section id="story-moments" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Key Moments</h2>
+                <div class="moments-grid">
+                    <div class="moment-card reveal">
+                        <div class="moment-inner">
+                            <div class="moment-front">
+                                <h3>The Vanishing Samurai</h3>
+                                <p>A displacement through time.</p>
+                            </div>
+                            <div class="moment-back">
+                                <p>Ryo arrives in modern Tokyo, adjusting to ramen and neon lights while Aiko helps him navigate a world of peace.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moment-card reveal">
+                        <div class="moment-inner">
+                            <div class="moment-front">
+                                <h3>The Third Path</h3>
+                                <p>Defying the rules of destiny.</p>
+                            </div>
+                            <div class="moment-back">
+                                <p>Faced with two impossible choices, Ryo grabs both the red and blue gates, refusing to let time decide his fate.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moment-card reveal">
+                        <div class="moment-inner">
+                            <div class="moment-front">
+                                <h3>The Rewritten World</h3>
+                                <p>A bond that survives time.</p>
+                            </div>
+                            <div class="moment-back">
+                                <p>The world is remade. Though memories fade, the connection between Ryo, Aiko, and Kenji remains as a timeless echo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="section">
+        <div class="container">
+            <div class="footer-content">
+                <p>Story concept by Creative Director</p>
+                <p>Voice-over by Akiko</p>
+                <small>Website designed for an immersive story experience.</small>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" class="scroll-top-btn" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
