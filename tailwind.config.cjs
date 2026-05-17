@@ -19,6 +19,11 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        script: ['"Great Vibes"', 'cursive'],
+        sans: ['"Open Sans"', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
